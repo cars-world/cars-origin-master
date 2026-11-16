@@ -44,7 +44,7 @@ import { start } from '@rljson/cars-origin-master';
 await start({ PORT: '3000' });
 ```
 
-`GET /` antwortet dann mit `Hello from cars-origin-master`.
+`GET /` antwortet dann mit `Hello from cars-origin-master <version>`.
 
 ### Container
 
@@ -52,6 +52,14 @@ Das Image in der Registry `crcars` bauen, getaggt mit der Version:
 
 ```bash
 az acr build --registry crcars --image cars-origin-master:<version> .
+```
+
+Ein Image, das zwischen zwei Releases gebaut wird, bekommt auch den
+kurzen Commit, so nennt jeder Tag genau einen Build:
+
+```bash
+az acr build --registry crcars \
+  --image cars-origin-master:<version>-$(git rev-parse --short HEAD) .
 ```
 
 ## Grenzen

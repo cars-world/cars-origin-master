@@ -8,6 +8,8 @@ import { Server } from 'node:http';
 import { AddressInfo } from 'node:net';
 import { afterEach, describe, expect, it } from 'vitest';
 
+import { carsOriginMasterVersion } from '../src/cars_origin_master_version';
+
 import { defaultPort, start } from '../src/start';
 
 describe('start()', () => {
@@ -24,7 +26,7 @@ describe('start()', () => {
     const { port } = server.address() as AddressInfo;
     const res = await fetch(`http://localhost:${port}/api/hello`);
     expect((await res.json()).lines).toEqual([
-      'Hello from cars-origin-master',
+      `Hello from cars-origin-master ${carsOriginMasterVersion}`,
     ]);
     expect(messages).toEqual(['cars-origin-master listens on port 0']);
   });

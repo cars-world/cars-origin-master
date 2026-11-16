@@ -8,6 +8,8 @@ import { Server } from 'node:http';
 import { AddressInfo } from 'node:net';
 import { afterEach, describe, expect, it } from 'vitest';
 
+import { carsOriginMasterVersion } from '../src/cars_origin_master_version';
+
 import { CarsOriginMaster, hello } from '../src/cars-origin-master';
 
 describe('CarsOriginMaster', () => {
@@ -26,7 +28,7 @@ describe('CarsOriginMaster', () => {
 
   describe('hello()', () => {
     it('returns the greeting of cars-origin-master', () => {
-      expect(hello()).toBe('Hello from cars-origin-master');
+      expect(hello()).toBe(`Hello from cars-origin-master ${carsOriginMasterVersion}`);
     });
   });
 
