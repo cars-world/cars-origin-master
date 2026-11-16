@@ -6,7 +6,7 @@
 
 {
   "name": "@rljson/cars-origin-master",
-  "summary": "Master of the origin side of the cars example app, where catalogs are captured originally; so far an HTTP server with GET / and GET /api/hello (its greeting) and GET /health; runs as the container app ca-cars-origin-master-<stage>.",
+  "summary": "Master of the origin side of the cars example app, where catalogs are captured originally; so far an HTTP server with GET / and GET /api/hello (its greeting with the version) and GET /health; runs as a container in the stages dev, test and prod.",
   "domain": [
     "master of the origin side: later holds all data of the side, on @rljson/server",
     "container cars-origin-master, Node, uid 1000, port 3000",

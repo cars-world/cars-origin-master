@@ -11,12 +11,14 @@ import {
   ServerResponse,
 } from 'node:http';
 
+import { carsOriginMasterVersion } from './cars_origin_master_version.ts';
+
 /**
  * Returns the greeting of this package.
- * @returns The line "Hello from cars-origin-master"
+ * @returns The line "Hello from cars-origin-master <version>"
  */
 export function hello(): string {
-  return 'Hello from cars-origin-master';
+  return `Hello from cars-origin-master ${carsOriginMasterVersion}`;
 }
 
 // .............................................................................
