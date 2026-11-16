@@ -2,4 +2,4 @@
 // Kept in sync by test/cars_origin_master_version.spec.ts.
 
 /** The version of the `@rljson/cars-origin-master` package. */
-export const carsOriginMasterVersion = '0.0.1';
+export const carsOriginMasterVersion = '0.0.2';

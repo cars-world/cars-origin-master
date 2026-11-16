@@ -1,6 +1,6 @@
 {
   "name": "@rljson/cars-origin-master",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Master of the origin side of the cars example app, where catalogs are captured originally",
   "homepage": "https://github.com/rljson/cars-origin-master",
   "bugs": "https://github.com/rljson/cars-origin-master/issues",
