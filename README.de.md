@@ -53,8 +53,9 @@ Das Image in der Registry `crcars` bauen, getaggt mit der Version:
 Ein Push auf `main` baut das Image und rollt es von selbst nach `dev`
 aus: der Workflow `deploy.yaml` ruft den Workflow `build` von
 [cars-deployment](https://github.com/cars-world/cars-deployment) auf, der
-das Image mit `<version>-<kurzer Commit>` taggt. Nur für einen Versuch
-von Hand bauen:
+das Image mit `<version>-<kurzer Commit>` taggt. **Actions → Deploy to
+dev → Run workflow** rollt `main` erneut aus. Nur für einen Versuch von
+Hand bauen:
 
 ```bash
 az acr build --registry crcars --image cars-origin-master:<version> .
