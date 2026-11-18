@@ -5,13 +5,15 @@
 # found in the LICENSE file in the root of this package.
 
 # Builds the image on every push to main and deploys it to dev, through the
-# workflow build of cars-deployment.
+# workflow build of cars-deployment. Run workflow in the tab Actions
+# deploys main again by hand.
 
 name: Deploy to dev
 
 on:
   push:
     branches: ['main']
+  workflow_dispatch:
 
 permissions:
   id-token: write
