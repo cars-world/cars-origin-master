@@ -12,7 +12,9 @@
     "container cars-origin-master, Node, uid 1000, port 3000",
   ],
   "interfaces": {
-    "uses": {},
+    "uses": {
+      "cars-deployment": "the reusable workflow build: deploys the image of origin-master to dev on a push to main"
+    },
     "usedBy": {
       "cars-origin-client": "GET /api/hello over HTTP",
     },

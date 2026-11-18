@@ -6,6 +6,7 @@
 
 import { describe, it } from 'vitest';
 
+import { carsOriginMasterVersion } from '../src/cars_origin_master_version';
 import { example } from '../src/example';
 
 import { expectGolden } from './setup/goldens';
@@ -18,6 +19,11 @@ describe('example', () => {
     example();
     console.log = log;
 
-    await expectGolden('example.log').toBe(logMessages.join('\n'));
+    // The golden file names the version as <version>, so a release keeps it
+    const output = logMessages
+      .join('\n')
+      .replaceAll(carsOriginMasterVersion, '<version>');
+
+    await expectGolden('example.log').toBe(output);
   });
 });
