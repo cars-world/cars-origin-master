@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- `pnpm run build` passes: `tsconfig.json` names the Node.js types,
+  which TypeScript 6 no longer loads by itself
+- The golden file of the example names the version as `<version>`, so a
+  release no longer breaks the test
 - Move the repository to the GitHub organization `cars-world` and
   rename the package to `@cars-world/cars-origin-master`
 - Update the golden of the greeting to the version `0.0.2`
