@@ -47,6 +47,12 @@ await start({ PORT: '3000' });
 
 Build the image in the registry `crcars`, tagged with the version:
 
+A push to `main` builds the image and deploys it to `dev` by itself:
+the workflow `deploy.yaml` calls the workflow `build` of
+[cars-deployment](https://github.com/cars-world/cars-deployment), which
+tags the image `<version>-<short commit>`. Build it by hand only for a
+try:
+
 ```bash
 az acr build --registry crcars --image cars-origin-master:<version> .
 ```

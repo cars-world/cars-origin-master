@@ -1,0 +1,24 @@
+# @license
+# Copyright (c) rljson
+#
+# Use of this source code is governed by terms that can be
+# found in the LICENSE file in the root of this package.
+
+# Builds the image on every push to main and deploys it to dev, through the
+# workflow build of cars-deployment.
+
+name: Deploy to dev
+
+on:
+  push:
+    branches: ['main']
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    uses: cars-world/cars-deployment/.github/workflows/build.yaml@main
+    with:
+      app: origin-master

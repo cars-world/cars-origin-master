@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- A push to `main` builds the image and deploys it to `dev`: the
+  workflow `deploy.yaml` calls the workflow `build` of `cars-deployment`
 - `pnpm run build` passes: `tsconfig.json` names the Node.js types,
   which TypeScript 6 no longer loads by itself
 - The golden file of the example names the version as `<version>`, so a
