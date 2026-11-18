@@ -6,11 +6,11 @@ Use of this source code is governed by terms that can be
 found in the LICENSE file in the root of this package.
 -->
 
-# @rljson/cars-origin-master
+# @cars-world/cars-origin-master
 
 [English](README.md) | Deutsch
 
-[![CI](https://github.com/rljson/cars-origin-master/actions/workflows/quick_check.yaml/badge.svg)](https://github.com/rljson/cars-origin-master/actions/workflows/quick_check.yaml)
+[![CI](https://github.com/cars-world/cars-origin-master/actions/workflows/quick_check.yaml/badge.svg)](https://github.com/cars-world/cars-origin-master/actions/workflows/quick_check.yaml)
 
 Master der Seite origin der cars-Beispiel-App, wo Kataloge ursprünglich erfasst werden.
 
@@ -31,7 +31,7 @@ Das Package ist privat und nicht auf npm veröffentlicht. Hänge von einer
 getaggten Version seines Git-Repos ab:
 
 ```bash
-pnpm add git+ssh://git@github.com/rljson/cars-origin-master.git#semver:^0.0.1
+pnpm add git+ssh://git@github.com/cars-world/cars-origin-master.git#semver:^0.0.1
 ```
 
 ## Verwendung
@@ -39,7 +39,7 @@ pnpm add git+ssh://git@github.com/rljson/cars-origin-master.git#semver:^0.0.1
 Den Server starten:
 
 ```ts
-import { start } from '@rljson/cars-origin-master';
+import { start } from '@cars-world/cars-origin-master';
 
 await start({ PORT: '3000' });
 ```

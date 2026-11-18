@@ -1,9 +1,9 @@
 {
-  "name": "@rljson/cars-origin-master",
+  "name": "@cars-world/cars-origin-master",
   "version": "0.0.2",
   "description": "Master of the origin side of the cars example app, where catalogs are captured originally",
-  "homepage": "https://github.com/rljson/cars-origin-master",
-  "bugs": "https://github.com/rljson/cars-origin-master/issues",
+  "homepage": "https://github.com/cars-world/cars-origin-master",
+  "bugs": "https://github.com/cars-world/cars-origin-master/issues",
   "private": true,
   "license": "MIT",
   "engines": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rljson/cars-origin-master.git"
+    "url": "git+https://github.com/cars-world/cars-origin-master.git"
   },
   "main": "dist/cars-origin-master.js",
   "types": "dist/index.d.ts",
