@@ -2,4 +2,4 @@
 // Kept in sync by test/cars_origin_master_version.spec.ts.
 
 /** The version of the `@cars-world/cars-origin-master` package. */
-export const carsOriginMasterVersion = '0.1.2';
+export const carsOriginMasterVersion = '0.1.3';
