@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- The image runs with `node` alone: npm, npx, corepack and yarn of the
+  base image are removed, and its Alpine packages are upgraded while
+  building: no high or critical findings with a fix
 - `deploy.yaml` can be started by hand with Run workflow, to deploy
   `main` again
 - A push to `main` builds the image and deploys it to `dev`: the

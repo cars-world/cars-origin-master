@@ -15,6 +15,13 @@ COPY . .
 RUN pnpm exec vite build && pnpm prune --prod
 
 FROM node:22-alpine
+# The master runs with node alone: npm, npx, corepack and yarn of the base
+# image are not needed at runtime and bring vulnerable packages along;
+# apk upgrade picks up fixes of Alpine published after the base image
+RUN apk upgrade --no-cache \
+    && rm -rf /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/corepack \
+       /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack \
+       /opt/yarn-* /usr/local/bin/yarn /usr/local/bin/yarnpkg
 WORKDIR /app
 ENV NODE_ENV=production PORT=3000
 COPY --from=build /app/package.json ./
